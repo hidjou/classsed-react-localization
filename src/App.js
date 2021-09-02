@@ -72,13 +72,11 @@ export default function App() {
               {languages.map(({ code, name, country_code }) => (
                 <li key={country_code}>
                   <a
-                    href="#"
+                    href={code}
                     className={classNames('dropdown-item', {
                       disabled: currentLanguageCode === code,
                     })}
-                    onClick={() => {
-                      i18next.changeLanguage(code)
-                    }}
+                   
                   >
                     <span
                       className={`flag-icon flag-icon-${country_code} mx-2`}
